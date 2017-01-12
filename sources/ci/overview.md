@@ -1,3 +1,7 @@
+page_title: Shippable CI/CD Overview
+page_description: Explanation of the CI/CD OVERVIEW
+page_keywords: ci/cd dashboard, subscription settings, CI/CD, shippable CI/CD, documentation, shippable, config, yml
+
 # Continuous Integration overview
 
 Shippable's Continuous Integration feature helps you automate unit testing, packaging, and deployment for any change in your source control repository.
