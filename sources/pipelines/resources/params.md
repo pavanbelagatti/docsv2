@@ -1,5 +1,5 @@
-page_title: Unified Pipeline Resources
-page_description: List of supported resources
+page_title: Custom Parameters in CD Pipeline
+page_description: Describes how custom parameters can be used in a CD pipeline
 page_keywords: Deploy multi containers, microservices, Continuous Integration, Continuous Deployment, CI/CD, testing, automation, pipelines, docker, lxc
 
 # params
