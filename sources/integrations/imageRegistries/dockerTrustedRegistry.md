@@ -25,21 +25,17 @@ You can pull any image you have access to, from Docker Trusted Registry and use 
 
 To pull an image, you'll need to do the following:
 
-1. Add the Docker Trusted Registry integration to your subscription.
+1. Ensure your Subscription has access to the Docker Trusted Registry integration
 2. Configure your `shippable.yml` to associate the Docker Trusted Registry integration for your project.
 
-###Add the Docker Trusted Registry integration to your subscription
-To add Docker Trusted Registry integration to your subscription, do the following:
+###Ensure your Subscription has access to the Docker Trusted Registry integration
 
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
+To ensure your Subscription has access to the Docker Trusted Registry integration, do the following:
+
+1. Log in to [Shippable](https://app.shippable.com).
 2. Select your Subscription from the dropdown burger bar menu on the top left.
 3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Docker Trusted Registry integration for your Subscription, such as `docker_trusted_registry_integration`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Docker Trusted Registry account integration created.
-7. Click the `Save` button.
-8. The Docker Trusted Registry integration will show up in the list of integrations for your subscription.
+4. If you find your integration in the list, you're good to go to the next step. If not, add the account integration to the Subscription by clicking on the `Add Integration` button and completing the required fields.
 
 ###Configure Docker Trusted Registry integration in the `shippable.yml`
 To enable Docker Trusted Registry integration for your project, add the following to the `shippable.yml` file for that project.
@@ -78,21 +74,17 @@ For more information on pulling images, refer our documentation on [pulling an i
 
 If you want to build your Docker image as part of your workflow for each CI run and if your 'Dockerfile' has a `FROM` which pulls a private image from Docker Trusted Registry, then you will need to do the following steps:
 
-1. Add the Docker Trusted Registry integration to your subscription.
+1. Ensure your Subscription has access to the Docker Trusted Registry integration
 2. Configure your `shippable.yml` to associate the Docker Trusted Registry integration for your project and add few options to ensure you are building the Docker image as part of CI.
 
-###Add the Docker Trusted Registry integration to your subscription
-To add Docker Trusted Registry integration to your subscription, do the following:
+###Ensure your Subscription has access to the Docker Trusted Registry integration
 
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
+To ensure your Subscription has access to the Docker Trusted Registry integration, do the following:
+
+1. Log in to [Shippable](https://app.shippable.com).
 2. Select your Subscription from the dropdown burger bar menu on the top left.
 3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Docker Trusted Registry integration for your Subscription, such as `docker_trusted_registry_integration`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Docker Trusted Registry account integration created.
-7. Click the `Save` button.
-8. The Docker Trusted Registry integration will show up in the list of integrations for your subscription.
+4. If you find your integration in the list, you're good to go to the next step. If not, add the account integration to the Subscription by clicking on the `Add Integration` button and completing the required fields.
 
 ###Configure Docker Trusted Registry integration in the `shippable.yml`
 
@@ -140,21 +132,17 @@ The main difference is that the `post_ci` section runs inside the build containe
 
 To push an image to Docker Trusted Registry, do the following:
 
-1. Add the Docker Trusted Registry integration to your subscription.
+1. Ensure your Subscription has access to the Docker Trusted Registry integration
 2. Configure your `shippable.yml` to associate the Docker Trusted Registry integration for your project and add few options to ensure you are pushing the Docker image in `post_ci` section or in the `push` section.
 
-###Add the Docker Trusted Registry integration to your subscription
-To add Docker Trusted Registry integration to your subscription, do the following:
+###Ensure your Subscription has access to the Docker Trusted Registry integration
 
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
+To ensure your Subscription has access to the Docker Trusted Registry integration, do the following:
+
+1. Log in to [Shippable](https://app.shippable.com).
 2. Select your Subscription from the dropdown burger bar menu on the top left.
 3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Docker Trusted Registry integration for your Subscription, such as `docker_trusted_registry_integration`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Docker Trusted Registry account integration created.
-7. Click the `Save` button.
-8. The Docker Trusted Registry integration will show up in the list of integrations for your subscription.
+4. If you find your integration in the list, you're good to go to the next step. If not, add the account integration to the Subscription by clicking on the `Add Integration` button and completing the required fields.
 
 ###Configure Docker Trusted Registry integration in the `shippable.yml`
 

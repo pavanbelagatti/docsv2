@@ -74,6 +74,7 @@ pages:
     - notification: pipelines/resources/notification.md
     - params: pipelines/resources/params.md
     - replicas: pipelines/resources/replicas.md
+    - time: pipelines/resources/time.md
     - version: pipelines/resources/version.md
   - Jobs:
     - Overview: pipelines/jobs/overview.md

@@ -22,6 +22,7 @@ There are several resources that are pre-defined as part of the platform and wor
 - [notification](notification/): Notifications for job success or failure
 - [integration](integration/): Credentials for third party services
 - [loadBalancer](loadBalancer/): AWS Classic and Application Load Balancers
+- [time](time/): Trigger a job at a specific day and time
 
 At this time, we do not support definition of custom resources. If you need a resource that is not listed above, send us an email at [support@shippable.com](mailto:support@shippable.com)
 

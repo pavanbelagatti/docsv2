@@ -23,10 +23,11 @@ On your [Shippable dashboard](https://shippable.com):
 
 1. Click on the gear icon for Account Settings in your top navigation bar and then click on the `Integrations` section.
 2. Click on the `Add Integration` button.
-3. For 'Integration type', choose `GCR` from the list of dropdown choices.
-2. For 'Integration Name' use a distinctive name that's easy to associate to the integration and recall. Example: `gcr_integration`
-11. Enter your JSON key that you saved earlier
-12. Click on `Save`
+3. Choose `GCR` from the list of integration types.
+4. For 'Integration Name' use a distinctive name that's easy to associate to the integration and recall. Example: `gcr_integration`
+5. Enter your JSON key that you saved earlier
+6. Assign this integration to the Subscription(s) you want to use it in. Since you're likely a member of many organizations, you need to specify which of them can use this integration.
+7. Click on `Save`
 
 <img src="/ci/images/integrations/imageRegistries/gcr/addInt.png" alt="Google Container Registry integration" style="width:700px;"/>
 

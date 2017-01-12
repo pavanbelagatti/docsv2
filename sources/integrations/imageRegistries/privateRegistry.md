@@ -12,10 +12,11 @@ To set up this integration, you will need the URL of your private registry.
 
 1. Click on the gear icon for Account Settings in your top navigation bar and then click on the 'Integrations' section.
 2. Click on the `Add Integration` button.
-3. For 'Integration type', choose `Private Docker Registry` from the list of dropdown choices.
+3. Choose `Private Docker Registry` from the list of integration types.
 4. For 'Integration Name', use a distinctive name that's easy to associate to the integration and recall. Example: `my_private_registry`.
 5. Enter the URL of your private registry and your credentials.
-6. Click on `Save`.
+6. Assign this integration to the Subscription(s) you want to use it in. Since you're likely a member of many organizations, you need to specify which of them can use this integration.
+7. Click on `Save`.
 
 The integration will now be available to all your continuous integration and deployment workflows.
 
@@ -33,21 +34,16 @@ You can pull any image you have access to, from Private Docker Registry and use 
 
 To pull an image, you'll need to do the following:
 
-1. Add the Private Docker Registry integration to your subscription.
+1. Ensure your subscription has access to the Private Docker Registry integration.
 2. Configure your `shippable.yml` to associate the Private Docker Registry integration for your project.
 
-###Add the Private Docker Registry integration to your subscription
-To add Private Docker Registry integration to your subscription, do the following:
+###Ensure your Subscription has access to the Private Docker Registry integration
+To ensure your Subscription has access to the Private Docker Registry integration, do the following:
 
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
+1. Log in to [Shippable](https://app.shippable.com).
 2. Select your Subscription from the dropdown burger bar menu on the top left.
 3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Private Docker Registry integration for your Subscription, such as `my_private_registry`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Private Docker Registry account integration created.
-7. Click the `Save` button.
-8. The Private Docker Registry integration will show up in the list of integrations for your subscription.
+4. If you find your integration in the list, you're good to go to the next step. If not, add the account integration to the Subscription by clicking on the `Add Integration` button and completing the required fields.
 
 ###Configure Private Docker Registry integration in the `shippable.yml`
 To enable Private Docker Registry integration for your project, add the following to the `shippable.yml` file for that project.
@@ -86,21 +82,16 @@ For more information on pulling images, refer our documentation on [pulling an i
 
 If you want to build your Docker image as part of your workflow for each CI run and if your 'Dockerfile' has a `FROM` which pulls a private image from Private Docker Registry, then you will need to do the following steps:
 
-1. Add the Private Docker Registry integration to your subscription.
+1. Ensure your Subscription has access to the Private Docker Registry integration
 2. Configure your `shippable.yml` to associate the Private Docker Registry integration for your project and add few options to ensure you are building the Docker image as part of CI.
 
-###Add the Private Docker Registry integration to your subscription
-To add Private Docker Registry integration to your subscription, do the following:
+###Ensure your Subscription has access to the Private Docker Registry integration
+To ensure your Subscription has access to the Private Docker Registry integration, do the following:
 
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
+1. Log in to [Shippable](https://app.shippable.com).
 2. Select your Subscription from the dropdown burger bar menu on the top left.
 3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Private Docker Registry integration for your Subscription, such as `my_private_registry`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Private Docker Registry account integration created.
-7. Click the `Save` button.
-8. The Private Docker Registry integration will show up in the list of integrations for your subscription.
+4. If you find your integration in the list, you're good to go to the next step. If not, add the account integration to the Subscription by clicking on the `Add Integration` button and completing the required fields.
 
 ###Configure Private Docker Registry integration in the `shippable.yml`
 
@@ -146,21 +137,17 @@ You can push your image to Private Docker Registry in the `post_ci` or `push` se
 
 To push an image to Private Docker Registry, do the following:
 
-1. Add the Private Docker Registry integration to your subscription.
+1. Ensure your Subscription has access to the Private Docker Registry integration
 2. Configure your `shippable.yml` to associate the Private Docker Registry integration for your project and add few options to ensure you are pushing the Docker image in `post_ci` section or in the `push` section.
 
-###Add the Private Docker Registry integration to your subscription
-To add Private Docker Registry integration to your subscription, do the following:
+###Ensure your Subscription has access to the Private Docker Registry integration
+To ensure your Subscription has access to the Private Docker Registry integration, do the following:
 
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
+1. Log in to [Shippable](https://app.shippable.com).
 2. Select your Subscription from the dropdown burger bar menu on the top left.
 3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Private Docker Registry integration for your Subscription, such as `my_private_registry`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Private Docker Registry account integration created.
-7. Click the `Save` button.
-8. The Private Docker Registry integration will show up in the list of integrations for your subscription.
+4. If you find your integration in the list, you're good to go to the next step. If not, add the account integration to the Subscription by clicking on the `Add Integration` button and completing the required fields.
+
 
 ###Configure Private Docker Registry integration in the `shippable.yml`
 

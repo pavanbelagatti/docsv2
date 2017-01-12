@@ -12,8 +12,7 @@ You can configure the integration in the `shippable.yml` according to your scena
 This can be done by following the steps below:
 
 1. Adding the Account Integration (One time only per account)
-2. Add the Event Trigger Integration to your Subscription
-3. Configure the Event Trigger Integration in the `shippable.yml` file for your project
+2. Configure the Event Trigger Integration in the `shippable.yml` file for your project
 
 ## Adding an Account Integration
 
@@ -27,7 +26,8 @@ You can add the integration for a Project or for a Generic Webhook. The steps to
 5. Under 'What would you like to trigger?' select `Project` from the dropdown choices.
 6. [Optional] Select the Project that you want to associate the integration. In the screen shot below, `sample_nodejs` has been selected.
 7. In the 'Authorization' field, you'll need to specify the [Shippable API Token](/NavigatingUI/accountSettings/api/).
-8. Click on `Save`.
+8. Assign this integration to the Subscription(s) you want to use it in. Since you're likely a member of many organizations, you need to specify which of them can use this integration.
+9. Click on `Save`.
 
 <img src="/ci/images/integrations/deploy/webhooks/addTriggerProject.png" alt="Event Trigger integration" style="width:700px;"/>
 
@@ -42,7 +42,8 @@ The integration will now be available to all your Continuous Integration and Pip
 5. Under 'What would you like to trigger?' select `Generic Webhook` from the dropdown choices.
 6. Specify a webhook URL you want to trigger in the 'WebhookURL' field.
 7. In the Authorization field, you need to specify the HTTP Authorization Header required to hit the specified webhook URL. If no authorization is required, this field can be left blank.
-8. Click on `Save`.
+8. Assign this integration to the Subscription(s) you want to use it in. Since you're likely a member of many organizations, you need to specify which of them can use this integration.
+9. Click on `Save`.
 
 <img src="/ci/images/integrations/deploy/webhooks/addTriggerWebhook.png" alt="Event Trigger integration" style="width:700px;"/>
 
@@ -50,25 +51,7 @@ The integration will now be available to all your Continuous Integration and Pip
 
 ---
 
-##Add the integration to your Subscription:
-
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
-2. Select your Subscription from the dropdown burger bar menu on the top left.
-3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the Webhook integration for your Subscription, such as `my_webhook_integration`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the Event Trigger account integration created.
-7. Click the `Save` button.
-8. The Webhook integration will show up in the list of integrations for your subscription.
-
-<img src="/ci/images/integrations/deploy/webhooks/addSubscriptionInt.png" alt="Event Trigger integration" style="width:700px;"/>
-
-The integration will now be available to all your Continuous Integration and Pipelines settings for any user with access to the Subscription.
-
----
-
-##Configure the Integration 
+##Configure the Integration
 
 You will need the following format to add the integration to your shippable.yml:
 

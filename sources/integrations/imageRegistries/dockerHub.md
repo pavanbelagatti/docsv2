@@ -18,9 +18,10 @@ You will need Docker Hub integration if you want to do the following -
 * Click on **Integrations** in the sidebar menu.
 * Click on **Add Integration**.
 * Enter the following:
-	* In the **Master Integration** dropdown, choose **Docker**
+	* From the list of integration types, choose **Docker**
 	* Add a friendly name for your integration
 	* Enter your Docker Hub credentials
+* Assign this integration to the Subscription(s) you want to use it in. Since you're likely a member of many organizations, you need to specify which of them can use this integration.
 * Click on **Save**. You should now see the integration in your list of integrations.
 
 To learn how to configure your CI and CD workflows to use Docker Hub images, check out our [Docker Hub Tutorial](../../tutorials/ci/integrations/imageRegistries/usingDockerHub/).

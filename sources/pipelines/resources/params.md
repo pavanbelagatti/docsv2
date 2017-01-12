@@ -27,7 +27,7 @@ resources:
 	* Include at least one key value pair under params
 	* You can use secure variables to encrypt any key value pairs that contain sensitive information you don't want to include as plain text. To encrypt one or more key value pairs, [follow the instructions in the Subscription Settings guide](../../navigatingUI/subscriptions/settings.md#encrypt). Copy the encrypted value and include it in your resource file as shown in the snippet above.
 
-A new version of this resource is created everytime aanything in the version section changes.  
+A new version of this resource is created every time anything in the version section changes.  
 
 
 ##Overriding params

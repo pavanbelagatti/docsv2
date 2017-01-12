@@ -6,18 +6,15 @@ page_keywords: containers, languages, services, platforms, lxc, docker, Continuo
 
 Integrations are used to connect your Shippable CI or CD workflows to third party platforms and services. We believe in separating authentication credentials from your yml definitions for better security and privacy. All integrations are stored in our <a href="https://www.vaultproject.io/" target="_blank">Vault store</a> for maximum security.
 
-Using an integration is a three step process:
+Using an integration is a two step process:
 
 <img src="../images/accountIntegrationLifecycle.png" alt="Google Container Registry integration" style="width:800px;"/>
 
 #### Adding an integration to your account
-You can get to your account integrations by clicking on the gear icon in the top navbar and clicking on `Integrations` in the left sidebar menu. Click on `Add integration` to add a new integration. Instructions for each type of integration are provided in the [section below](#listIntegrations).
-
-#### Enabling the integration for a [Subscription](../ci/overview/#subscription)
-Next, you should go to your [Subscription's Settings](../navigatingUI/subscriptions/settings/) and click on `Integrations` on the left sidebar. Here, you can enable any of your account integrations for that particular subscription. This gives all projects in that subscription permission' to use that integration in their yml configurations.
+You can get to your account integrations by clicking on the gear icon in the top navbar and clicking on `Integrations` in the left sidebar menu. Click on `Add integration` to add a new integration. Instructions for each type of integration are provided in the [section below](#listIntegrations). Please note that while creating the integration, you will need to specify which Subscriptions have access to it. This is a very important step and if you miss it, you will not be able to use it in your ymls.
 
 #### Using the integration in your yml
-Once an integration is enabled for a subscription, you can use it in any project in that subscription with a few lines of yml configuration. Please note that the integration name should be the one from Subscription Settings.
+Once an integration is enabled for a subscription, you can use it in any project in that subscription with a few lines of yml configuration. Please note that the integration name should be the one configured in your integration.
 
 For more details on how to use each type of integration, click on the integration you need from the list below.
 

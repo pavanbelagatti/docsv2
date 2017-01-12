@@ -6,28 +6,24 @@ page_keywords: Docker Hub, amazon, ecs, gcr, google, shippable, quay, coreos, do
 
 An ECR integration lets you configure the following scenarios:
 
-- Pull a private image for your CI workfow
+- Pull a private image for your CI workflow
 - Build a Docker image which has a `FROM` that pulls a private image
 - Push an image as part of CI
 - Use an [image resource](../../pipelines/resources/image/) as part of your CD [pipeline](../../pipelines/overview/)
 
-Using an ECR integration is a three step process:
+Using an Amazon ECR integration is a two step process:
 
 <img src="../../images/accountIntegrationLifecycle.png" alt="Google Container Registry integration" style="width:800px;"/>
 
 * **Adding an integration to your account**
 
-You can get to your account integrations by clicking on the gear icon in the top navbar and clicking on `Integrations` in the left sidebar menu. Click on `Add integration` to add a new integration. Detailed instructions are provided in the [section below](#addAccountIntegration).
+You can get to your account integrations by clicking on the gear icon in the top navbar and clicking on `Integrations` in the left sidebar menu. Click on `Add integration` to add a new integration. Detailed instructions are provided in the [section below](#addAccountIntegration). Please note that while adding your integration, you will need to specify which subscriptions will have access to the integration.
 
-* **Enabling the integration for a [Subscription](../../../ci/overview/#subscription)**
+* **Using the integration in your yml**
 
-Next, you should go to your [Subscription's Settings](../../../navigatingUI/subscriptions/settings/#adding-integrations) and click on `Integrations` on the left sidebar. Here, you can enable any of your account integrations for that particular subscription. This means that all projects in that subscription can now use that integration in their yml configurations. Detailed instruction on this step and in the [Adding integration to your Subscription section](#addSubscriptionIntegration) below.
+Once an integration is enabled for a subscription, you can use it in any CI project in that subscription with a few lines of yml configuration. Please note that the integration name should be the one from Subscription Settings. Additional details are in the [Using integration in your yml](#useIntegrationYml) section below.
 
-* **Using the integration in your yml (CI only)**
-
-Once an integration is enabled for a subscription, you can use it in any project in that subscription with a few lines of yml configuration. Please note that the integration name should be the one from Subscription Settings. Additional details are in the [Using integration in your yml](#useIntegrationYml) section below.
-
-If you're creating an integration to use with a pipelines [image resource](../../../pipelines/resources/image/), please refer to the documentation on defining an [integration resource](../../../pipelines/resources/integration/).
+If you're creating an integration to use with a Pipelines [image resource](../../../pipelines/resources/image/), please refer to the documentation on defining an [integration resource](../../../pipelines/resources/integration/).
 
 ---
 <a name="addAccountIntegration"></a>
@@ -38,31 +34,15 @@ You will need to configure this integration to pull or push images to Amazon ECR
 
 1. Click on the gear icon for Account Settings in your top navigation bar and then click on the 'Integrations' section.
 2. Click on the `Add Integration` button.
-3. For 'Integration type', choose `Amazon ECR` from the list of dropdown choices.
+3. Choose `Amazon ECR` from the list of integration types.
 4. For 'Integration Name' use a distinctive name that's easy to associate to the integration and recall. Example: `ecr-integration`
-5. Enter your aws_access_key_id and aws_secret_access_key. You can follow instructions in [Amazon's guide for Creating and Managing access keys](http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)  
-12. Click on `Save`
+5. Enter your aws_access_key_id and aws_secret_access_key. You can follow instructions in [Amazon's guide for Creating and Managing access keys](http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)
+6. Assign this integration to the Subscription(s) you want to use it in. Since you're likely a member of many organizations, you need to specify which of them can use this integration.
+7. Click on `Save`
 
-The integration will now be available to all your continuous integration and deployment workflows.
+The integration will now be available to all your Continuous Integration and Deployment workflows.
 
 <img src="/ci/images/integrations/imageRegistries/ecr/addInt.png" alt="Amazon EC2 Container Registry integration" style="width:700px;"/>
-
----
-
-<a name="addSubscriptionIntegration"></a>
-##Enabling integration for your Subscription
-
-To add ECR integration to your subscription, do the following:
-
-1. Ensure you have logged in to [Shippable](https://app.shippable.com).
-2. Select your Subscription from the dropdown burger bar menu on the top left.
-3. Click the 'Settings' tab and go to the 'Integrations' section.
-4. Click the `Add Integration` button.
-5. Provide an easy-to-remember name for the ECR integration for your Subscription, such as `ecr-integration`, in the 'Name' field.
-**IMPORTANT:** The 'Name' you have entered in this step should be used in your `shippable.yml` file. Both names should be exactly the same. If not the build will fail with an error.
-6. From the 'Account Integrations' dropdown select the ECR account integration created.
-7. Click the `Save` button.
-8. The ECR integration will show up in the list of integrations for your subscription.
 
 ---
 
